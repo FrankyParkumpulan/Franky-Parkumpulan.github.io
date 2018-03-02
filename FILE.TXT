@@ -11,26 +11,22 @@ STORE "TAHUN" with 0
 STORE "TAHUN KABISAT" with 0
 STORE "BUKAN TAHUN KABISAT" with 0
 
-if TAHUN % 4 = 0;
-   then
-       if TAHUN % 100 is 0
-           then
-               if TAHUN modulo 400 is 0
-                   then TAHUN KABISAT
-                       
-               else
-                   BUKAN TAHUN KABISAT
-       else TAHUN KABISAT
-else BUKAN TAHUN KABISAT
-END
+Input tahun
+if TAHUN tidak habis dibagi 4 !=0
+   Do "Bukan Tahun Kabisat"
+       else if ((TAHUN % 100 = 0) and (tahun % 400 = 0))
+			Do "Tahun Kabisat"
+       else 
+	   Do "TAHUN KABISAT!"
+END If
+DISPLAY "TAHUN"
 
 
 STORE "LAUNDRY" with 0
+WHILE LAUNDRY <= 20
+  ADD "Menghitung jumlah baju" + LAUNDRY increment = 1
 
-WHILE "STOP" <= 20
-  ADD "LAUNDRY" by 1
-
-DISPLAY "STOP"
+DISPLAY "JUMLAH BAJU"
 END
 
 
